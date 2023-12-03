@@ -267,15 +267,12 @@ a {
     height:fit-content;
     background-color:rgb(29, 161, 242, 0.7);
     border-radius: 16px;
-    padding:24px 24px 0;
+    padding:24px;
+    box-shadow: 0px 8px 15px black;
+    border: 2px inset;
 }
 
-.pre-footer-card img {
-    height: 20rem;
-    align-self: flex-end;
-}
-
-.music-card-text {
+.twitter-card-text {
     display: flex;
     flex-direction: column;
     color: white;
@@ -283,18 +280,33 @@ a {
     align-items: center;
     justify-items: stretch;
     text-wrap: wrap;
-    font-weight: 400;
+    font-weight: bolder;
     height: auto;
     border-radius: 12px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family:monospace ;    
     line-height: 1.0;
-    width: 220px;
+    width: 300px;
 }
 
-.music-card-text h3{
+#twitter_id {
+    color: white;
+    background-image: url(./oscar_billy_curtains.png);
+    width: 200px;
+    height: 200px;
+    align-self: center;
+    border:4px inset rgb(29, 161, 242, 0.7);
+    box-shadow: 4px 4px 20px black;
+    border-radius: 50%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    object-fit: contain;
+}
+
+.twitter-card-text h3{
     font-size: x-large;
 }
-.music-card-text p{
+.twitter-card-text p{
     font-size:medium;
 }
 
@@ -326,7 +338,7 @@ a {
     font-family: 'Times New Roman', Times, serif;
     padding: 6px;
     font-size: small;
-    position: fixed;
+    position:static;
     bottom: 0;
     width: 100%;
 }
@@ -358,7 +370,8 @@ a {
     }
 
     .pre-footer-card {
-        padding:16px 2px 0;
+        padding:16px;
+        flex-wrap: wrap;
     }
 
     .pre-footer-container {
@@ -373,6 +386,13 @@ a {
     .pre-footer-card img {
         max-width:75%;
         height: auto;
+    }
+
+    .pre-footer-card {
+        display: flex;
+        flex-direction: column;
+        justify-content:stretch;
+        align-items: center;
     }
 
 }
