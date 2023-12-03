@@ -134,7 +134,7 @@ a {
 .review-boxes .container {
     display: flex; 
     justify-content: center;
-    column-gap: 94px;
+    column-gap: 80px;
     row-gap: 60px;
     max-width:100vw;
     flex-wrap: wrap;
