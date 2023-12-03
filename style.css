@@ -6,8 +6,6 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-image: url(./background_image1.jpg);
-    background-size:repeat;
 }
 
 h1, h2, h3 {
@@ -15,8 +13,8 @@ h1, h2, h3 {
 }
 
 .navbar {
-    /* background-color: silver; */
-    background-image: url(./navbar_background.png);
+    background-image: url(./navbar_bg.png);
+
     background-size:contain;
     border-bottom: 2px solid #1f2937 ;
     color: white;
@@ -39,25 +37,14 @@ h1, h2, h3 {
     gap: 24px;
 }
 
-@media (max-width:575px){
-    .navbar .container {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-items: center;
-        gap: 0;
-        width: 100%;
-        height: 100%;
-    }
-    
-}
+
 
 .logo {
     font-size: xx-large;
     font-weight: bold;
     font-style:oblique;
     text-wrap:nowrap;
-    text-shadow: 4px 4px 8px #e5e7eb;
+    text-shadow: 4px 4px 8px black;
 }
 
 .navbar .nav {
@@ -66,6 +53,7 @@ h1, h2, h3 {
     justify-content: space-between;
     gap: 26px; 
     margin-right: 0;
+    text-shadow: 4px 4px 8px black;
 }
 
 a {
@@ -92,21 +80,19 @@ a {
     min-height: 400px;
     display: flex;
     justify-content: center;
+    gap: 10px;
     align-items: center;
-    padding:0 305px;
-
+    padding:0 10dvw;
+    background-image: url(./curtains_bg.jpg);
+    background-position: center;
+    background-size: contain;    
 }
 
-@media (max-width: 800px) {
-    .header .container {
-        flex-wrap: wrap;
-        padding: 0 60px;
-    }
-    
-    .header .header-title {
-        text-align: center;
-    }
+#site-presentation {
+    flex: 1 1 0;
+    min-width: 40dvw;
 }
+
 
 .header p {
     font-family:monospace;
@@ -115,6 +101,7 @@ a {
 
 .container h1 {
     font-size: 3rem;
+    padding-bottom: 20px;
 }
 
 .container #site-presentation {
@@ -123,9 +110,9 @@ a {
 }
 
 .container img {
-    max-width: 300px;
+    max-width: 400px;
     height: auto;
-    padding: 1em;
+    margin-top: 16px;
     padding-bottom: 0;
 }
 
@@ -134,12 +121,12 @@ a {
 }
 
 .review-boxes #review-section-title {
-    /* font-size: 3rem; */
     text-align: center;
     background-color: silver;
     opacity: 0.9;
     padding: 12px;
     font-size: 36px;
+    margin: 0;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
@@ -150,9 +137,10 @@ a {
     row-gap: 60px;
     max-width: fit-content;
     flex-wrap: wrap;
-    margin-top: 120px;
-    margin-bottom: 120px;
-    padding: 0 140px;
+    padding: 10dvh 10dvw;
+    background-image: url(./cinema2_bg.jpg);
+    background-size:cover;
+    background-position: center;
 }
 
 .review-boxes p {
@@ -160,7 +148,7 @@ a {
 }
 
 .box {
-    width:400px;
+    width:300px;
     height: 400px;
     transition-duration: 2s;
     display: flex;
@@ -168,7 +156,7 @@ a {
     flex-direction: column;
     justify-content: center;
     padding: 24px;
-    color: #1f2937;
+    color:transparent;
     border-radius: 8px;
 }
 
@@ -177,39 +165,39 @@ a {
 }
 
 .box#movie1 {
-    background-image: url(./2001_img.jpg);
+    background-image: url(./terminator_frog.jpeg);
     background-size:cover;
     background-position: left;
 }
 
 .box#movie2 {
-    background-image: url(./terminator.jpg);
+    background-image: url(./rambo_theFrog.jpeg);
     background-size:cover;
     background-position: left;
 }
 
 .box#movie3 {
-    background-image: url(./blood_diamond.jpg);
+    background-image: url(./predator_frog.jpeg);
     background-size:cover;
     background-position: left;
 }
 
 .box#movie4 {
-    background-image: url(./they_cloned_tyrone.jpg);
+    background-image: url(./Indiana_frog_Jones.jpeg);
     background-size:cover;
     background-position: left;
 }
 
 .box#movie1:hover {
-    background-image: url(./2001_img.jpg);
+    background-image: url(./terminator_frog.jpeg);
     background-size:cover;
-    background-position:center;
-    color: black ;
-    text-shadow: 8px 8px 10px white;
+    background-position: center;
+    color: white ;
+    text-shadow: 8px 8px 10px black;
 }
  
 .box#movie2:hover {
-    background-image: url(./terminator.jpg);
+    background-image: url(./rambo_theFrog.jpeg);
     background-size:cover;
     background-position: center;
     color: white ;
@@ -217,7 +205,7 @@ a {
 }
 
 .box#movie3:hover {
-    background-image: url(./blood_diamond.jpg);
+    background-image: url(./predator_frog.jpeg);
     background-size:cover;
     background-position: center;
     color: white ;
@@ -225,7 +213,7 @@ a {
 }
 
 .box#movie4:hover {
-    background-image: url(./they_cloned_tyrone.jpg);
+    background-image: url(./Indiana_frog_Jones.jpeg);
     background-size:cover;
     background-position: center;
     color: white ;   
@@ -239,7 +227,7 @@ a {
     text-align:justify;
     font-size: 36px;
     font-weight: lighter;
-    padding: 100px;
+    padding: 5dvw;
     background-color: #e5e7eb;
 }
 
@@ -261,31 +249,46 @@ a {
     text-align: end;
     font-weight: 500;
 }
-.music-card-container {
+
+.pre-footer-container {
     display: flex;
     justify-content: center;
-    padding: 48px;
+    padding: 10dvh 50dvw;
+    background-image: url(./curtains_bg.jpg);
+    background-size: cover;
+}
+
+.pre-footer-card {
+    display: flex;
+    justify-content:center;
+    align-items: stretch;
+    gap: 8px;
+    width: fit-content;
+    height:fit-content;
+    background-color:rgb(29, 161, 242, 0.7);
+    border-radius: 16px;
+    padding:24px 24px 0;
+}
+
+.pre-footer-card img {
+    height: 20rem;
+    align-self: flex-end;
 }
 
 .music-card-text {
     display: flex;
     flex-direction: column;
     color: white;
-    padding: 24px;
-    text-align: justify;
-    font-weight: 600;
-    width: 350px;
-    background-image: url(./green_music_background.jpg);
-    background-position: top;
-    background-size: cover;
-    opacity: 0.9;
-    border-radius: 12px;
+    text-align:start;
     align-items: center;
-    box-shadow: 10px 30px 30px lightgreen;
-    font-family:monospace;
+    justify-items: stretch;
+    text-wrap: wrap;
+    font-weight: 400;
+    height: auto;
+    border-radius: 12px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     line-height: 1.0;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    width: 220px;
 }
 
 .music-card-text h3{
@@ -308,7 +311,7 @@ a {
 }
 
 .button:hover {
-    background-color: lightgreen;
+    background-color: #1DA1F2;
 }
 
  .button #spotify-icon {
@@ -328,56 +331,48 @@ a {
     width: 100%;
 }
 
-/*This part will style the review pages sections.*/
-
-.container#review-text {
-    background-color: white;
-    padding: 4vw;
-    margin: 0 28vw;
-    min-width: fit-content;
-    opacity: 0.9;
-    border-radius: 40px;
-    gap: 0;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-
-
-#review-text p {
-    text-align: justify;
-    text-indent: 50px;
-    font-size: 18px;
-}
-
-#review-text h3 {
-    font-size: 20px;
-}
-
-@media (max-width: 600px) {
-    .container#review-text {
-        margin: 0 14vw;
-        font-size: 14px;
-    }
-
-    #review-text p, #review-text h3 {
-        font-size: 14px;
+@media (max-width:575px){
+    .navbar .container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0;
+        width: 100%;
+        height: 100%;
     }
 }
 
-p {
-    margin: 4px;
-    font-size: 16px;
-}
+@media (max-width: 800px) {
+    .header .container {
+        flex-wrap: wrap;
+        padding: 10px 10dvw 0;
+    }
+    
+    .header .header-title {
+        text-align: center;
+    }
 
-#reviewpage-subtitle {
-    font-style: italic;
-}
+    #quote, #author { 
+        font-size: 28px;
+    }
 
-#review-references {
-    margin-top: 36px;
-    padding: 2vh;
+    .pre-footer-card {
+        padding:16px 2px 0;
+    }
+
+    .pre-footer-container {
+        padding: 10dvh 25dvw;
+    }
+
+    .pre-footer-card {
+        flex-wrap: wrap;
+        width:500px;
+    }
+
+    .pre-footer-card img {
+        max-width:75%;
+        height: auto;
+    }
+
 }
